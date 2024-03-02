@@ -24,6 +24,15 @@ public class WeakClass {
         }
     }
     
+    public static int WeakMethod4(int x, int y) {
+        if (x > 10) {
+            return x + 10;
+        } else if (x > 5) {
+            return x - 5;
+        } else {
+            return x / y; // פוטנציאל לתקלת חלוקה באפס
+        }
+    }
     
 }
 
