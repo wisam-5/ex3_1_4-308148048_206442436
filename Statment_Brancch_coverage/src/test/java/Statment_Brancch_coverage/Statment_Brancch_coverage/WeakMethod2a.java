@@ -4,8 +4,13 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class WeakMethod2a {
-    @Test(expected = ArithmeticException.class)
+    @Test
     public void testDivisionByZero() {
-        WeakClass.WeakMethod2(2,0); 
+        try {
+            WeakClass.WeakMethod2(5, 0);
+            fail("אמורה הייתה להיות זריקת ArithmeticException.");
+        } catch (ArithmeticException e) {
+            // החריג נתפס, כך שהבדיקה עוברת בהצלחה.
+        }
     }
 }
