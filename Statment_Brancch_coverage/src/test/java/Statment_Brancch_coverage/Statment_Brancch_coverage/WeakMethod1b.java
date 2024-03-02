@@ -15,3 +15,4 @@ public class WeakMethod1b {
     }
 }
 
+
